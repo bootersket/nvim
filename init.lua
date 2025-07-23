@@ -16,6 +16,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
     { "numToStr/Comment.nvim", config = true },
+
     -- Color schemes
     { "ellisonleao/gruvbox.nvim", priority = 1000 },
     { "folke/tokyonight.nvim", priority = 1000 },
@@ -24,8 +25,11 @@ require("lazy").setup({
 })
 
 vim.opt.termguicolors = true
--- Cool color schemes:
+
+-- Select color scheme to use
 vim.cmd("colorscheme carbonfox")
+
+-- Make all comments green
 vim.cmd [[
     highlight Comment guifg=#00ff00 ctermfg=244
 
